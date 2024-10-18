@@ -1,4 +1,4 @@
-/* src/App.css */
+@import 'animate.css';
 
 .App {
   text-align: center;
@@ -6,7 +6,7 @@
 
 .App-header {
   background-color: #4a90e2;
-  padding: 20px;
+  padding: 30px;
   color: white;
 }
 
@@ -43,11 +43,19 @@ nav ul li a {
   color: #4a90e2;
   text-decoration: none;
   font-size: 1.2em;
+  transition: all 0.4s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  background-color: #4a90e2;
+  color: white;
+  transition: all 0.4s ease;
+  border-radius: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1.6em;
 }
+
 /* Resume Specific Styles */
 .resume-section {
   padding: 30px;
@@ -72,7 +80,6 @@ nav ul li a:hover {
 }
 
 .job ul {
-  list-style-type: disc;
   margin-top: 10px;
   padding-left: 20px;
 }
