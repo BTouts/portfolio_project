@@ -1,7 +1,7 @@
 // src/App.js
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import "./App.css";
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import './App.scss'
 
 function App() {
   return (
@@ -32,11 +32,11 @@ function App() {
         </Routes>
       </div>
     </Router>
-  );
+  )
 }
 
 function Home() {
-  return <h1>Welcome to My Portfolio</h1>;
+  return <h1>Welcome to My Portfolio</h1>
 }
 
 function AboutMe() {
@@ -48,14 +48,14 @@ function AboutMe() {
         innovation.
       </p>
     </section>
-  );
-}
-
-function Resume() {
-  return <h2>Resume Page</h2>;
+  )
 }
 
 function Projects() {
+  return <h2>Projects Page</h2>
+}
+
+function Resume() {
   return (
     <section class="resume-section">
       <h2>Work Experience</h2>
@@ -195,7 +195,7 @@ function Projects() {
         </p>
       </div>
     </section>
-  );
+  )
 }
 
-export default App;
+export default App
