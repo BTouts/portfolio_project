@@ -1,90 +1,102 @@
 @import 'animate.css';
 
+/* Make sure the HTML and body take up full height */
+html,
+body {
+  height: 100%;
+  margin: 0; /* Reset margin */
+}
+
+/* Ensure the App component fills the viewport height */
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use full height of the viewport */
   text-align: center;
+  padding-top: 100px;
+  background-color: #f5efe6; /* Use your background color here */
 }
 
+/* Keep header fixed at the top */
 .App-header {
-  background-color: #4a90e2;
-  padding: 30px;
-  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #aebdca; /* Semi-transparent white */
+  padding: 50px; /* Add some padding for better spacing */
+  z-index: 1000; /* Make sure it stays above other content */
 }
 
-.about-section {
-  margin: 50px;
-  padding: 20px;
-  background-color: #f0f8ff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Ensure the content below the header is visible */
+.main-content {
+  flex: 1; /* This will take the remaining space in the flex container */
+  padding: 20px; /* Add some padding for the content */
 }
 
-.about-section h2 {
-  color: #4a90e2;
+/* Circle Menu Styles */
+.circle-menu {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 58px;
+  height: 58px;
+  background-color: rgba(217, 217, 217, 1); /* Light Grey */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
 }
 
-.about-section p {
-  font-size: 1.2em;
-  color: #333;
-  line-height: 1.6;
+.menu-button {
+  width: 40px;
+  height: 40px;
+  background-color: #7895b2; /* Dark Blue */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-/* src/App.css */
-nav ul {
-  list-style: none;
-  padding: 0;
+.menu-items {
+  position: absolute;
+  top: 30px; /* Adjust to ensure it's below the circle */
+  right: 30px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  width: 400px; /* Adjust based on spacing for menu items */
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
+/* Show the menu items when menu is open */
+.menu-items.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-nav ul li a {
-  color: #4a90e2;
+.menu-item {
   text-decoration: none;
-  font-size: 1.2em;
-  transition: all 0.4s ease;
+  color: #7895b2; /* Dark Blue */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 1em;
+  //transition: background-color 1s ease;
 }
 
-nav ul li a:hover {
-  background-color: #4a90e2;
+.menu-item:hover {
   color: white;
-  transition: all 0.4s ease;
-  border-radius: 25px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 1.6em;
+  background-color: #7895b2;
+  border-radius: 15px;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
-/* Resume Specific Styles */
-.resume-section {
-  padding: 30px;
-}
-
-.job,
-.education {
-  margin-bottom: 30px;
-}
-
-.job h3,
-.education h3 {
-  font-size: 1.8em;
-  margin-bottom: 5px;
-  color: #4a90e2;
-}
-
-.job p,
-.education p {
-  font-style: italic;
-  color: #666;
-}
-
-.job ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.job ul li,
-.education ul li {
-  margin-bottom: 10px;
+/* Hover effect for the button */
+.menu-button:hover {
+  background-color: #4a90e2; /* Change the button color when hovering */
 }
