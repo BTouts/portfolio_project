@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import './App.scss'
+import RandomAlbum from './pages/album-rec'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -56,6 +57,13 @@ function App() {
               Resume
             </Link>
             <Link
+              to="/album-rec"
+              className="menu-item"
+              onClick={() => setMenuOpen(false)}
+            >
+              Album Recommendation
+            </Link>
+            <Link
               to="/projects"
               className="menu-item"
               onClick={() => setMenuOpen(false)}
@@ -72,6 +80,7 @@ function App() {
             <Route path="/about" element={<AboutMe />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/album-rec" element={<RandomAlbum />} />
           </Routes>
         </div>
       </div>
@@ -98,6 +107,8 @@ function AboutMe() {
 function Projects() {
   return <h2>Projects Page</h2>
 }
+
+function albumRec() {}
 
 function Resume() {
   return (
