@@ -46,7 +46,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #355e86;
-  margin-right: 50px; /* Aligns title to the far left */
+  margin-right: 300px; /* Aligns title to the far left */
 }
 
 .circle-menu {
@@ -70,7 +70,7 @@ body {
 .menu-items {
   //margin: 0 auto;
   top: 10;
-  right: 40px; /* Controls distance to the right of the menu button */
+  right: 0px; /* Controls distance to the right of the menu button */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
