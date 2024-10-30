@@ -28,12 +28,13 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          {/* Circle that acts as the menu button */}
+          <div className="web-title">Brett Toutkoushian's Portfolio</div>{' '}
+          {/* Title on the far left */}
+          {/* Centered circle menu button */}
           <div className="circle-menu" onClick={toggleMenu}>
-            <div className="menu-button"></div>
+            <div className="menu-button">Menu</div>
           </div>
-
-          {/* Menu Options */}
+          {/* Menu items positioned relative to circle-menu */}
           <div ref={menuRef} className={`menu-items ${menuOpen ? 'show' : ''}`}>
             <Link
               to="/"
