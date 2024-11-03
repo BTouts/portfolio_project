@@ -4,6 +4,7 @@ import './App.scss'
 import RandomAlbum from './pages/album-rec'
 import Resume from './pages/resume'
 import ContactPage from './pages/contact'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -24,6 +25,7 @@ function App() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
+    window.scrollTo(0, 0)
   }, [menuRef])
 
   return (
@@ -87,6 +89,7 @@ function App() {
           </Routes>
         </div>
       </div>
+      <ScrollToTop />
     </Router>
   )
 }
