@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import './App.scss'
 import RandomAlbum from './pages/album-rec'
+import Resume from './pages/resume'
+import ContactPage from './pages/contact'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -65,11 +67,11 @@ function App() {
               Album Recommendation
             </Link>
             <Link
-              to="/projects"
+              to="/contact"
               className="menu-item"
               onClick={() => setMenuOpen(false)}
             >
-              Projects
+              Contact Me
             </Link>
           </div>
         </header>
@@ -80,7 +82,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/album-rec" element={<RandomAlbum />} />
           </Routes>
         </div>
@@ -110,14 +112,5 @@ function Projects() {
 }
 
 function albumRec() {}
-
-function Resume() {
-  return (
-    <section className="resume-section">
-      <h2>Work Experience</h2>
-      {/* Your resume content here */}
-    </section>
-  )
-}
 
 export default App
