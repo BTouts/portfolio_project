@@ -216,3 +216,91 @@ body {
     margin: 5px 0; // Spacing between paragraphs
   }
 }
+.App-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px; /* Move closer to the top */
+  gap: 50px;
+  height: 80vh; /* Increase height to occupy more space */
+}
+
+/* Left Half for Blurb and Images */
+.left-half {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
+  gap: 30px;
+}
+
+.blurb {
+  font-size: 20px;
+  color: #355e86;
+  max-width: 100%; /* Increase width for readability */
+  text-align: left;
+}
+
+/* Right Half for Menu Circles */
+.right-half {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.menu-circles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px; /* Increased size */
+  border-radius: 50%;
+  background-color: #355e86;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #5d7b9d;
+  }
+}
+
+/* Image Placeholder Section */
+.image-section {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.image-placeholder {
+  object-fit: cover;
+  width: 350px;
+  height: 220px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  animation: fadeInUp 0.5s;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Custom Animation Delays */
+.delay-1 {
+  animation-delay: 0.3s;
+}

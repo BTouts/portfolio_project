@@ -5,6 +5,7 @@ import RandomAlbum from './pages/album-rec'
 import Resume from './pages/resume'
 import ContactPage from './pages/contact'
 import ScrollToTop from './components/ScrollToTop'
+import HomePage from './pages/home'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -81,7 +82,7 @@ function App() {
         {/* Main content area */}
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<ContactPage />} />
